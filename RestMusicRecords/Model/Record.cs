@@ -32,7 +32,7 @@ namespace RestMusicRecords.Model
             get => _nr;
             set
             {
-                value = _nr;
+                _nr = value;
             }
         }
 
@@ -41,7 +41,7 @@ namespace RestMusicRecords.Model
             get => _title;
             set
             {
-                value = _title;
+                _title = value;
             }
         }
 
@@ -50,26 +50,31 @@ namespace RestMusicRecords.Model
             get => _artist;
             set
             {
-                value = _artist;
+                _artist = value;
             }
         }
 
-        public int Nr
+        public int Duration
         {
-            get => _nr;
+            get => _duration;
             set
             {
-                value = _nr;
+                _duration = value;
             }
         }
 
-        public int Nr
+        public int YearOfPublication
         {
-            get => _nr;
+            get => _yearOfPublication;
             set
             {
-                value = _nr;
+                _yearOfPublication = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{Title} Nr: {Nr}";
         }
     }
 }

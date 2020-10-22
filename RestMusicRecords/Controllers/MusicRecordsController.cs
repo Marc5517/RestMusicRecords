@@ -13,7 +13,7 @@ namespace RestMusicRecords.Controllers
     [ApiController]
     public class MusicRecordsController : ControllerBase
     {
-        private static readonly List<Record> records = new List<Record>()
+        private static readonly List<Record> Records = new List<Record>()
         {
             new Record(1, "I'm still standing", "Elton John", 182, 1983),
             new Record(2, "Timelapse", "The Fat Rat", 120, 2015),
@@ -25,7 +25,7 @@ namespace RestMusicRecords.Controllers
         [HttpGet]
         public IEnumerable<Record> Get()
         {
-            return records;
+            return Records;
         }
 
         // GET api/<MusicRecordsController>/5

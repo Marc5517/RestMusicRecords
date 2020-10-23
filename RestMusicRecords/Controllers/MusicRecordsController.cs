@@ -29,10 +29,27 @@ namespace RestMusicRecords.Controllers
         }
 
         // GET api/<MusicRecordsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("{nr}")]
+        public Record GetRecord(int nr)
         {
-            return "value";
+            return Records.Find(r => r.Nr == nr);
+        }
+
+        [HttpGet]
+        [Route("Title/{substring}")]
+        public IEnumerable<Record> GetFromSubstring(String substring)
+        {
+            List<Record> lRecord = Records.FindAll(r => r.Title.Contains(substring));
+            return lRecord;
+        }
+
+        [HttpGet]
+        [Route("Artist/{substring}")]
+        public IEnumerable<Record> GetFromAnotherSubstring(String substring)
+        {
+            List<Record> lRecord = Records.FindAll(r => r.Artist.Contains(substring));
+            return lRecord;
         }
 
         // POST api/<MusicRecordsController>

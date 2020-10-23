@@ -18,7 +18,10 @@ namespace RestMusicRecords.Controllers
             new Record(1, "I'm still standing", "Elton John", 182, 1983),
             new Record(2, "Timelapse", "The Fat Rat", 120, 2015),
             new Record(3, "We are", "Hiroshi Kitadani", 240, 1999),
-            new Record(4, "Some song", "Some guy", 60, 2000)
+            new Record(4, "Some song", "Some guy", 60, 2000),
+            new Record(5, "Your Song", "Elton John", 240, 1970),
+            new Record(6, "Unity", "The Fat Rat", 249, 2014),
+            new Record(7, "Show Me Your Genitals", "Jon Lajoie", 231, 2008)
         };
 
         // GET: api/<MusicRecordsController>

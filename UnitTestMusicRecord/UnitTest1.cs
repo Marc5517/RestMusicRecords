@@ -23,7 +23,7 @@ namespace UnitTestMusicRecord
 
             List<Record> rList = new List<Record>(cntr.Get());
 
-            Assert.AreEqual(4, rList.Count);
+            Assert.AreEqual(7, rList.Count);
         }
 
         [TestMethod]
@@ -42,9 +42,7 @@ namespace UnitTestMusicRecord
             // Arrange
             // BeforeEachTest
 
-            List<Record> rList = new List<Record>(cntr.Get());
-
-            Assert.AreEqual(4, rList.Count);
+            Assert.AreEqual(cntr.GetFromAnotherSubstring("Elton John").Count(), 2);
         }
     }
 }

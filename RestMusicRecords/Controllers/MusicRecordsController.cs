@@ -55,6 +55,14 @@ namespace RestMusicRecords.Controllers
             return lRecord;
         }
 
+        [HttpGet]
+        [Route("YearOfPublication/{year}")]
+        public IEnumerable<Record> GetFromAYear(int year)
+        {
+            List<Record> lRecord = Records.FindAll(r => r.YearOfPublication == year);
+            return lRecord;
+        }
+
         // POST api/<MusicRecordsController>
         [HttpPost]
         public void Post([FromBody] string value)
@@ -72,5 +80,6 @@ namespace RestMusicRecords.Controllers
         public void Delete(int id)
         {
         }
+
     }
 }
